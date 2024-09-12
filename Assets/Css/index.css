@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Karantina:wght@300;400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    margin: 0;
+    font-family: Poppins;
+    color: #1E1E1E;
+    background-image: 
+    repeating-linear-gradient(
+        to right, transparent 0 150px, #0001 150px 151px
+    ),
+    repeating-linear-gradient(
+        to bottom, transparent 0 150px, #0001 150px 151px
+    ),
+    linear-gradient(to right, #CDCDCDcc, #CDCDCDcc),
+    url(/Assets/Images/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+.contentHead{
+    padding: 0px 3vw;
+}
+.contentHead{
+    margin: auto;
+    padding-top: 50px;
+    /* flex-wrap: wrap; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.left h1{
+    font-family: "Karantina", system-ui;
+    font-size:15vw;
+    line-height: 0.8em;
+}
+.left img{
+    width: 50%;
+}
+.author{
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 10px;
+}
+.author h3{
+    font-family: "Karantina", system-ui;
+    font-size: 5vw;
+}
+.author p:nth-child(2){
+    font-weight: 500;
+}
+.author>div{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.author img{
+    width: 250px;
+}
+.banner{
+    height: 100vh;
+    position: relative;
+}
+.banner .product{
+    /* background-color: red; */
+    height: 500px;
+    width: 500px;
+    position: absolute;
+    bottom: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    transition: 0.7s;
+    --left:0px;
+    display: flex;
+}
+.can1{
+    background:url(/Assets/Images/bg.png) var(--left) 0
+    ,url(/Assets/Images/mockup.png);
+    background-size: auto 100%;
+    width: 280px;
+    /* height: 400px; */
+    aspect-ratio: 2/4;
+    background-blend-mode: multiply;
+    mask-image: url(/Assets/Images/mockup.png);
+    mask-size: auto 100%;
+    transition: 0.7s;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.can2{
+    background:url(/Assets/Images/bg2.png) var(--left) 0
+    ,url(/Assets/Images/mockup.png);
+    background-size: auto 100%;
+    width: 280px;
+    /* height: 400px; */
+    aspect-ratio: 2/4;
+    background-blend-mode: multiply;
+    mask-image: url(/Assets/Images/mockup.png);
+    mask-size: auto 100%;
+    transition: 0.7s;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.product .soda{
+    position: absolute;
+    bottom: 0;
+    left: calc(50%);
+    transform: translateX(-50%);
+}
+.banner .product:hover{
+    --left:-1000px;
+    transform: translateX(-50%) translateY(-120px);
+}
+.rock{
+    position: absolute;
+    inset: 0 0 0 0;
+    width: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+.banner .rock img:nth-child(1){
+    position: absolute;
+    height: 170px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    transition: 0.7s;
+}
+.banner:has(.product:hover) .rock img:nth-child(1){
+    transform: translateX(-50%) translateY(50%);
+}
+.banner .rock img:nth-child(2){
+    height: 50%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: 0.7s;
+}
+.banner:has(.product:hover) .rock img:nth-child(2){
+    transform: translateX(-50px) translateY(50px);
+}
+.banner .rock img:nth-child(3){
+    height: 100%;
+    position: absolute;
+    right: 0;
+    bottom:-100px;
+    rotate: -30deg;
+    transition: 0.7s;
+}
+.banner.banner:has(.product:hover) .rock img:nth-child(3){
+    transform: translateX(100px) translateY(100px);
+}
+.banner .product .soda:nth-child(2){
+    opacity: 0;
+}
+.banner .product:hover .soda:nth-child(2){
+    opacity: 1;
+}
