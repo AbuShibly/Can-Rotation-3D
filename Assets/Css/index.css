@@ -12,7 +12,7 @@ body{
         to bottom, transparent 0 150px, #0001 150px 151px
     ),
     linear-gradient(to right, #CDCDCDcc, #CDCDCDcc),
-    url(/Assets/Images/bg.jpg);
+    url(../Images/bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -81,28 +81,28 @@ body{
     display: flex;
 }
 .can1{
-    background:url(/Assets/Images/bg.png) var(--left) 0
-    ,url(/Assets/Images/mockup.png);
+    background:url(../Images/bg.png) var(--left) 0
+    ,url(../Images/mockup.png);
     background-size: auto 100%;
     width: 280px;
     /* height: 400px; */
     aspect-ratio: 2/4;
     background-blend-mode: multiply;
-    mask-image: url(/Assets/Images/mockup.png);
+    mask-image: url(../Images/mockup.png);
     mask-size: auto 100%;
     transition: 0.7s;
     left: 50%;
     transform: translateX(-50%);
 }
 .can2{
-    background:url(/Assets/Images/bg2.png) var(--left) 0
-    ,url(/Assets/Images/mockup.png);
+    background:url(../Images/bg2.png) var(--left) 0
+    ,url(../Images/mockup.png);
     background-size: auto 100%;
     width: 280px;
     /* height: 400px; */
     aspect-ratio: 2/4;
     background-blend-mode: multiply;
-    mask-image: url(/Assets/Images/mockup.png);
+    mask-image: url(../Images/mockup.png);
     mask-size: auto 100%;
     transition: 0.7s;
     left: 50%;
